@@ -8,7 +8,7 @@ const UserList = ({user,setusers}) => {
 
   }
   const useList = user.map((user, i) => {
-    return <li className='mb-2' key={i}><Users uu={user.name} userId={i} deleteHandler={deleteHandler} /></li> 
+    return <li className='mb-2' key={i}><Users uu={user.name} ue={user.email} userId={i} deleteHandler={deleteHandler} /></li> 
   })
   return (
     <div className='absolute py-5 h-full left-[83%] flex flex-col gap-3'>
