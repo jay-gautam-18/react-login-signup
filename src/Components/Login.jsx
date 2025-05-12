@@ -4,9 +4,19 @@ const Login = ({toggler,settoggler,forms,user}) => {
   const submitHandler =(data) => {
     if(user.users.length === 0){
       alert("no user found , please register")
+      forms.reset()
+      settoggler(!toggler)
       return
     }
-    user.users.find(u => u.email === data.email && u.password === data.password ? alert("Login Successful") : alert("Invalid Credentials"))
+    const result =user.users.find(u => u.email === data.email && u.password === data.password )
+    if(result){
+      alert("Login Success")
+      forms.reset()
+    }else{
+      alert("Invalid credentials")
+      forms.reset()
+    }
+    
   }
   
   return (

@@ -10,7 +10,6 @@ const Register = ({toggler,settoggler,forms,user}) => {
     }
     user.setusers((prevUsers) => [...prevUsers, { name: data.name, email: data.email , password: data.password }]);
     forms.reset()
-    alert("User Registered Successfully")
   }
   
   return (
